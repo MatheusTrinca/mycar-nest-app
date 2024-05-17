@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
   Param,
   Patch,
   Post,
@@ -43,6 +44,7 @@ export class UsersController {
   }
 
   @Post('/signout')
+  @HttpCode(200)
   signout(@Session() session: any) {
     session.userId = null;
   }
