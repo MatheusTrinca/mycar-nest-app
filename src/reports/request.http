@@ -12,9 +12,13 @@ Content-Type: application/json
   "lng": 0
 }
 
+### Approve report
 PATCH http://localhost:3000/reports/1
 Content-Type: application/json
 
 {
   "approved": true
 }
+
+### Get Estimate
+GET http://localhost:3000/reports?make=toyota&model=corolla&year=2015&mileage=10000&lat=0&lng=0
